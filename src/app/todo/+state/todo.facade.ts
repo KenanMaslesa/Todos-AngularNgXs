@@ -6,10 +6,10 @@ import {
   DeleteTodo,
   GetTodos,
   UpdateTodo,
-} from './store/todo.actions';
+} from './todo.actions';
 import { Observable } from 'rxjs';
-import { TodoSelectors } from './store/todo.selectors';
-import { Todo, TodoStateModel } from './models';
+import { TodoSelectors } from './todo.selectors';
+import { Todo, TodoStateModel } from '../models';
 
 @Injectable({
   providedIn: 'root',

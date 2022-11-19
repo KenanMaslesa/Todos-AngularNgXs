@@ -7,7 +7,7 @@ import {NgxsLoggerPluginModule} from '@ngxs/logger-plugin';
 
 import { TodoModule } from './todo/todo.module';
 import { AppComponent } from './app.component';
-import { TodoState } from './todo/store/todo.state';
+import { TodoState } from './todo/+state/todo.state';
 @NgModule({
   declarations: [AppComponent],
   imports: [

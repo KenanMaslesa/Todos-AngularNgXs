@@ -1,4 +1,4 @@
-import { Todo } from './../models';
+import { Todo } from '../models';
 import { TodoState } from './todo.state';
 import { Selector } from '@ngxs/store';
 import { TodoStateModel } from '../models';
