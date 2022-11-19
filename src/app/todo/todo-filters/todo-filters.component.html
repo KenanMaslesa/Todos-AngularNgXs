@@ -3,10 +3,10 @@
     *ngIf="todoFacade.numberOfUncompletedTodos$ | async as numberOfUncompletedTodos"
     >{{ numberOfUncompletedTodos }} items left</span
   >
-  <ul>
+  <!-- <ul>
     <li>All</li>
     <li>Active</li>
     <li>Completed</li>
-  </ul>
+  </ul> -->
   <button (click)="deleteCompletedTodos()">Clear completed</button>
 </div>
