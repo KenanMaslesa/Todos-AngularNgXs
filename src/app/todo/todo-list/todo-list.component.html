@@ -1,0 +1,15 @@
+<ul
+  class="todo__list"
+  [class.todo__list--loading]="todoFacade.isLoading$ | async"
+  *ngIf="todoFacade.todos$"
+>
+  <li class="todo__item" *ngFor="let todo of todoFacade.todos$ | async; trackBy: trackById">
+    <input
+      type="checkbox"
+      [checked]="todo.completed"
+      (change)="updateTodo(todo)"
+    />
+    <label>{{ todo.title }}</label>
+    <button (click)="deleteTodo(todo.id)">x</button>
+  </li>
+</ul>
