@@ -7,12 +7,12 @@ import { Todo } from './models';
   providedIn: 'root',
 })
 export class TodoService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+  private apiUrl = 'https://mockend.com/KenanMaslesa/todos-api/todo';
 
   constructor(private http: HttpClient) {}
 
   public getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.apiUrl}`);
+    return this.http.get<Todo[]>(`${this.apiUrl}?limit=10&id_order=asc`);
   }
 
   public deleteTodo(id: number): Observable<void> {
