@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { TodoFacade } from '../todo-facade';
+import { TodoFacade } from '../todo.facade';
 
 @Component({
   selector: 'app-todo-add',

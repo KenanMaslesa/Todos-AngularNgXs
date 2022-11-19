@@ -1,4 +1,4 @@
-import { TodoFacade } from './../todo-facade';
+import { TodoFacade } from '../todo.facade';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
