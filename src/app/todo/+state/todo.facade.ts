@@ -9,7 +9,7 @@ import {
 } from './todo.actions';
 import { Observable } from 'rxjs';
 import { TodoSelectors } from './todo.selectors';
-import { Todo, TodoStateModel } from '../models';
+import { Todo } from '../models';
 
 @Injectable({
   providedIn: 'root',
