@@ -19,6 +19,6 @@ export class DeleteTodo {
   constructor(public id: number) {}
 }
 
-export class DeleteCompletedTodos {
-  static readonly type = '[Todo] Delete Completed Todos';
+export class ClearCompletedTodos {
+  static readonly type = '[Todo] Clear Completed Todos';
 }

@@ -1,10 +1,10 @@
 import { Action, State, StateContext } from '@ngxs/store';
 import {
   AddTodo,
+  ClearCompletedTodos,
   DeleteTodo,
   GetTodos,
   UpdateTodo,
-  DeleteCompletedTodos,
 } from './todo.actions';
 import { tap } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -93,7 +93,7 @@ export class TodoState {
     );
   }
 
-  @Action(DeleteCompletedTodos)
+  @Action(ClearCompletedTodos)
   deleteCompletedTodos(ctx: StateContext<TodoStateModel>) {
     ctx.patchState({
       isLoading: true,
