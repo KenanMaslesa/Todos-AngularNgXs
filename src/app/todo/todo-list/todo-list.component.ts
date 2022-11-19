@@ -22,7 +22,7 @@ export class TodoListComponent implements OnInit {
       {
         id: todo.id,
         title: todo.title,
-        completed: !todo.completed,
+        completed: !todo.completed, // changing only this field
         userId: todo.userId,
       },
       todo.id

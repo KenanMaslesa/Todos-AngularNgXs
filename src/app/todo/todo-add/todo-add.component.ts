@@ -24,17 +24,18 @@ export class TodoAddComponent implements OnInit, OnDestroy {
   }
 
   public addTodo(todo: string): void {
-    this.formSubscription.add();
-    this.todoFacade
-      .dispatchAddTodo({
-        id: Date.now(),
-        userId: Date.now(),
-        title: todo,
-        completed: false,
-      })
-      .subscribe(() => {
-        this.clearForm();
-      });
+    this.formSubscription.add(
+      this.todoFacade
+        .dispatchAddTodo({
+          id: Date.now(),
+          userId: Date.now(),
+          title: todo,
+          completed: false,
+        })
+        .subscribe(() => {
+          this.clearForm();
+        })
+    );
   }
 
   public submitForm(): void {
