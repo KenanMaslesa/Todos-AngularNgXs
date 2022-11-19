@@ -62,7 +62,7 @@ body {
         border-top: 1px solid #e6e6e6;
         transition: all 0.5s;
 
-        &--loading {
+        &.loading {
           &::before {
             content: "Loading...";
             position: absolute;

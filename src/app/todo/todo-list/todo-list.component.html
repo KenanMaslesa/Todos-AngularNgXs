@@ -1,6 +1,6 @@
 <ul
   class="todo__list"
-  [class.todo__list--loading]="todoFacade.isLoading$ | async"
+  [class.loading]="todoFacade.isLoading$ | async"
   *ngIf="todoFacade.todos$  | async as todos"
 >
   <li
