@@ -17,10 +17,10 @@ import { Todo, TodoStateModel } from './models';
 export class TodoFacade {
   @Select(TodoSelectors.getTodoList) todos$: Observable<Todo[]>;
   @Select(TodoSelectors.getIsLoading) isLoading$: Observable<boolean>;
-  @Select(TodoSelectors.getNumberOfUncompletedTodos) numberOfUncompletedTodos$: Observable<number>;
+  @Select(TodoSelectors.getNumberOfUncompletedTodos)
+  numberOfUncompletedTodos$: Observable<number>;
 
-  constructor(private store: Store) {
-  }
+  constructor(private store: Store) {}
 
   public dispatchGetTodos(): void {
     this.store.dispatch(new GetTodos());
@@ -41,5 +41,4 @@ export class TodoFacade {
   public dispatchAddTodo(todo: Todo): Observable<Todo[]> {
     return this.store.dispatch(new AddTodo(todo));
   }
-
 }

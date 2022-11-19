@@ -1,5 +1,11 @@
 import { Action, State, StateContext } from '@ngxs/store';
-import { AddTodo, DeleteTodo, GetTodos, UpdateTodo, DeleteCompletedTodos } from './todo.actions';
+import {
+  AddTodo,
+  DeleteTodo,
+  GetTodos,
+  UpdateTodo,
+  DeleteCompletedTodos,
+} from './todo.actions';
 import { tap } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { TodoService } from '../todo.service';
@@ -93,7 +99,7 @@ export class TodoState {
       isLoading: true,
     });
     const state = ctx.getState();
-    const uncompletedTodos = state.todos.filter(todo => !todo.completed);
+    const uncompletedTodos = state.todos.filter((todo) => !todo.completed);
     ctx.setState({
       ...state,
       todos: uncompletedTodos,

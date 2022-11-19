@@ -17,14 +17,14 @@ export class TodoSelectors {
   @Selector([TodoState])
   static getNumberOfUncompletedTodos(state: TodoStateModel): number {
     const todos = [...state.todos];
-    const completedTodos = todos.filter(todo => todo.completed);
+    const completedTodos = todos.filter((todo) => todo.completed);
     return state.todos.length - completedTodos.length;
   }
 
   @Selector([TodoState])
   static getCompletedTodos(state: TodoStateModel): number {
     const todos = [...state.todos];
-    const completedTodos = todos.filter(todo => todo.completed);
+    const completedTodos = todos.filter((todo) => todo.completed);
     return state.todos.length - completedTodos.length;
   }
 }

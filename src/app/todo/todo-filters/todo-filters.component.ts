@@ -6,14 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './todo-filters.component.html',
 })
 export class TodoFiltersComponent implements OnInit {
+  constructor(public todoFacade: TodoFacade) {}
 
-  constructor(public todoFacade: TodoFacade) { }
-
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void {}
 
   public deleteCompletedTodos(): void {
     this.todoFacade.dispatchDeleteCompletedTodos();
   }
-
 }
