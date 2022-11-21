@@ -1,6 +1,6 @@
 App:
 
-https://kmaslesa-ngrx-todos.netlify.com
+kmaslesa-ngxs-todos.netlify.com
 
 Todos API:
 
