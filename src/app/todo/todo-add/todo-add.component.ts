@@ -28,7 +28,6 @@ export class TodoAddComponent implements OnInit, OnDestroy {
       this.todoFacade
         .dispatchAddTodo({
           id: Date.now(),
-          userId: Date.now(),
           title: todo,
           completed: false,
         })
